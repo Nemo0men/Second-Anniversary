@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, X, Cookie, Car, Beef, Clapperboard, HelpCircle  } from 'lucide-react';
+import { Heart, X, Cookie, Car, Beef, Clapperboard, HelpCircle, Sun  } from 'lucide-react';
 import co from '/resources/co.jpg'; 
 import emptylot from '/resources/emptylot.jpg';
 import baking from '/resources/baking.jpg';
 import titanic from '/resources/titanic.jpg';
 import miffywallpaper from '/resources/miffywallpaper.jpg';
 import miffies from '/resources/miffies.png';
+import sunset from '/resources/sunset.jpg';
 
 function App() {
   const [name, setName] = useState('');
@@ -53,6 +54,13 @@ function App() {
       description: "Ending our day watching \"Titanic.\" \nHopefully while eating good cookies.",
       image: titanic,
       position: "left"
+    },
+    {
+      time: "8 AM",
+      activity: "Early Morning Prayer",
+      description: "Waking up for the one we love",
+      image: sunset,
+      position: "center"
     }
   ];
 
@@ -248,6 +256,9 @@ function App() {
                           )}
                           {index === 3 && (
                             <Clapperboard className="text-pink-500" size={24} />
+                          )}
+                          {index === 4 && (
+                            <Sun className="text-pink-500" size={24} />
                           )}
                         </div>
                         <p className="font-handwriting text-lg text-gray-800 leading-relaxed whitespace-pre-line">
