@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, X, Cookie, Car, Beef, Clapperboard } from 'lucide-react';
+import { Heart, X, Cookie, Car, Beef, Clapperboard, HelpCircle  } from 'lucide-react';
 import co from '/resources/co.jpg'; 
 import emptylot from '/resources/emptylot.jpg';
 import baking from '/resources/baking.jpg';
@@ -238,7 +238,7 @@ function App() {
                       <div className="h-full flex flex-col justify-center items-center text-center p-4">
                         <div className="bg-pink-100 rounded-full p-3 mb-4">
                           {index === 0 && (
-                            <Car className="text-pink-500" size={24} />
+                            <HelpCircle className="text-pink-500" size={24} />
                           )}
                           {index === 1 && (
                             <Beef className="text-pink-500" size={24} />
