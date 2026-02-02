@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.road {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    #ffffff 20px,
+    #ffffff 30px
+  ),
+  linear-gradient(
+    90deg,
+    #f9a8d4,
+    #fce7f3
+  );
+  height: 10px;
+  position: relative;
+}
+
+.road::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(249, 168, 212, 0.2) 0%,
+    rgba(252, 231, 243, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(249, 168, 212, 0.2);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .polaroid {
+    padding: 0.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .transform-style-3d {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .road {
+    height: 5px; /* Adjust road height for smaller screens */
+  }
+}
